@@ -21,4 +21,4 @@ app.get("/signup", async (req , res)=> {
     res.json( { message : "user signed up successfully !", id: user.id});
 })
 
-app.listen(3000);
+app.listen(3002);

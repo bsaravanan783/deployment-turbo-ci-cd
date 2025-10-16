@@ -5,13 +5,13 @@ const server = new WebSocketServer({
     
 });
 
-server.on("connection" , (socket) => {
-    client.user.create({
+server.on("connection" , async (socket) => {
+    await client.user.create({
         data : {
             username : Math.random().toString(),
             password : Math.random().toString(),
         }
     })
-
+ 
     socket.send("User connected successfully to socket server");
 })
